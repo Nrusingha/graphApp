@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="headerbar">
+        <span> Test Project </span>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <span class="nav-link"> User:  </span>
+            </li>
+            <li class="nav-item">
+                <span class="nav-link"> <strong> {{username}} </strong> </span>
+            </li>
+            <li class="nav-item">
+                <button class="btn btn-primary" color="primary" (click)="logout()">Logout</button>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link disabled" tabindex="-1" aria-disabled="true"> &nbsp; &nbsp; &nbsp;</a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+
+            <app-graph-chart></app-graph-chart>
+
+        </div>
+    </div>
+</div>

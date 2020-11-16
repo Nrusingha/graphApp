@@ -1,0 +1,28 @@
+<h4 style="text-align:center"> Bar graph chart of covid-19 status </h4> <br/>
+
+<div class="row">
+    <div class="col-md-2"> </div>
+    <div class="col-md-9">
+
+        <canvas baseChart [datasets]="barChartData" [labels]="mbarChartLabels" [options]="barChartOptions" [colors]="barChartColors" [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+      </canvas>
+
+    </div>
+
+</div>
+
+<br/>
+<div class="row">
+    <div class="col-md-3">
+        <button (click)="randomize()" class="btn btn-primary">Update Data</button>
+    </div>
+    <div class="col-md-9 form-inline">
+        <label class="col-md-4"> Filter Country: </label>
+        <select name="selectCounrty" [(ngModel)]="selectedCounrty" (change)="onChange()" class="form-control col-md-8">
+          <option *ngFor="let country of countries" [ngValue]="country.Slug">
+          {{country.Country}}
+           </option>
+     </select>
+        <!-- {{selectedCounrty}} -->
+    </div>
+</div>
